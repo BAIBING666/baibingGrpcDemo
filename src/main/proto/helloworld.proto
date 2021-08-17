@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+
+
+package helloworld;
+
+// 问好类
+service Greeter {
+  // 问候方法
+  rpc SayHello (HelloRequest) returns (HelloReply);
+}
+
+// 请求类
+message HelloRequest {
+  string name = 1;
+}
+
+// 回应类
+message HelloReply {
+  string message = 1;
+}
